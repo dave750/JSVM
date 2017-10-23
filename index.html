@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div data-bindable="true" data-class="ViewModel" data-object="viewModel">
+            <div data-binding="Text"></div>
+        </div>
+        
+        <script type="module">
+            import { Bindings } from "./lib/jsvm.js";
+            import { ViewModel } from "./scripts/ViewModel.js";
+
+            Bindings.Init([ViewModel]);   
+            
+            Bindings.viewModel.Text = "Hello, World!";
+        </script>
+
+    </body>
+</html>

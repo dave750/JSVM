@@ -1,3 +1,5 @@
+"use strict";
+
 import { BoundObject } from "/lib/BoundObject.js";
 
 export class ViewModel extends BoundObject {

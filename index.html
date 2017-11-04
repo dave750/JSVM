@@ -3,7 +3,10 @@
     </head>
     <body>
         <div data-bindable="true" data-class="ViewModel" data-object="viewModel">
-            <div data-binding="Text"></div>
+            <div data-binding="Text" data-binding-type="String"></div>
+            <ul data-binding="List" data-binding-type="String-List">
+                <li data-binding="String" data-binding-type="Data-Template" style="display: none;"></li>
+            </ul>
         </div>
         
         <script type="module">
@@ -13,6 +16,12 @@
             Bindings.Init([ViewModel]);   
             
             Bindings.viewModel.Text = "Hello, World!";
+
+            Bindings.viewModel.List = [1,2,3,4,5,6];
+
+            console.log(typeof(""));
+            console.log(typeof([]));
+            console.log(typeof(Bindings.viewModel));
         </script>
 
     </body>

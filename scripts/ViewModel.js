@@ -6,11 +6,11 @@ export class ViewModel extends BoundObject {
     constructor(parent){
         super(parent);
         this._text = null;
-        console.log("construct!");
+        this._list = null;
     }
 
     get Text(){
-        if (this._text == null){
+        if (this._text === null){
             return "";
         }
         return this._text;
@@ -19,5 +19,17 @@ export class ViewModel extends BoundObject {
         this._text = value;
 
         this.RaisePropertyChangedEvent("Text", value);
+    }
+
+    get List() {
+        if (this._list === null) {
+            return [];
+        }
+        return this._list;
+    }
+    set List(value) {
+        this._list = value;
+
+        this.RaisePropertyChangedEvent("List", value);
     }
 }
